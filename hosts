@@ -1,0 +1,8 @@
+[local]
+localhost
+
+[external]
+droplet
+
+[local:vars]
+ansible_connection=local
