@@ -11,4 +11,4 @@ ansible-playbook sexualize.yaml -i hosts -l local --tags desktop
 ```bash
 ansible-playbook sexualize.yaml -i hosts -l external --tags webserver
 ```
-***NOTE***: you should edit the <ins>external</ins> group in `hosts` file first!
+***NOTE***: you should edit the <ins>external</ins> group in [`hosts`](hosts) file first!
