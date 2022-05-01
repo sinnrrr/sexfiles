@@ -1,0 +1,18 @@
+---
+- name: "Install alacritty"
+  community.general.ansible_galaxy_install:
+    type: role
+    name: "jahrik.alacritty"
+  tags:
+    - packages
+    - desktop
+
+- name: Link alacritty config files
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/*.yml"
+    dest: "{{ dotfiles_home }}/alacritty/"
+    state: link
+    force: true
+  tags:
+    - config
+    - desktop

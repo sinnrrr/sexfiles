@@ -1,4 +1,5 @@
 - name: Set up the local development environment
-  hosts: local 
+  hosts: all 
   roles:
     - git
+    - alacritty
