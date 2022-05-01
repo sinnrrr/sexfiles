@@ -1,0 +1,18 @@
+---
+- name: "Install karabiner"
+  community.general.homebrew_cask:
+    name: "karabiner-elements"
+    state: "present"
+  tags:
+    - packages
+    - desktop
+
+- name: "Link karabiner config files"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/karabiner"
+    dest: "{{ dotfiles_home }}/karabiner"
+    state: link
+    force: true
+  tags:
+    - config
+    - desktop

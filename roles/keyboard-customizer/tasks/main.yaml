@@ -1,0 +1,3 @@
+---
+- import_tasks: karabiner.yaml
+  when: ansible_facts['os_family'] == "Darwin"

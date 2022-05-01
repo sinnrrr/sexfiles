@@ -9,10 +9,12 @@
 
 - name: Link alacritty config files
   ansible.builtin.file:
-    src: "{{ role_path }}/files/*.yml"
-    dest: "{{ dotfiles_home }}/alacritty/"
+    src: "{{ role_path }}/files/alacritty"
+    dest: "{{ dotfiles_home }}/alacritty"
     state: link
     force: true
+  register: config_copied
+  ignore_errors: true
   tags:
     - config
     - desktop
